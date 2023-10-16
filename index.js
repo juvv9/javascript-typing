@@ -8,3 +8,7 @@ const questions = [
   'getElementByClassName',
   'addEventListener'
 ];
+
+const entered = document.getElementById('entered');
+const remained = document.getElementById('remained');
+const inputText = document.getElementById('inputText');
