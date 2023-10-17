@@ -28,6 +28,10 @@ document.addEventListener('input', (e) => {
     console.log('未入力' + remainedTextWords);
     console.log('==========================');
 
+    // 入力済みテキスト&未入力テキストを連結して画面表示
+    entered.textContent = enteredTextWords.join('');
+    remained.textContent = remainedTextWords.join('');
+
   } else {
     console.log('不正解');
   }
