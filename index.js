@@ -32,6 +32,12 @@ document.addEventListener('input', (e) => {
     entered.textContent = enteredTextWords.join('');
     remained.textContent = remainedTextWords.join('');
 
+    // 全ての文字が正しく入力されたら新しい問題文をセット
+    if (remainedTextWords.length <= 0) {
+      console.log('クリア！全ての文字が入力されました');
+      setQuestion();
+    }
+
   } else {
     console.log('不正解');
   }
