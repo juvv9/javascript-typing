@@ -16,6 +16,10 @@ const inputText = document.getElementById('inputText');
 let remainedTextWords = remained.textContent.split('');
 let enteredTextWords = [];
 
+const setQuestion = () => {
+  // ここに処理を書く
+}
+
 document.addEventListener('input', (e) => {
   if (remainedTextWords[0] === e.data) {
     // 入力済み文字の配列の最後に1文字を追加
@@ -35,7 +39,7 @@ document.addEventListener('input', (e) => {
     // 全ての文字が正しく入力されたら新しい問題文をセット
     if (remainedTextWords.length <= 0) {
       console.log('クリア！全ての文字が入力されました');
-      setQuestion();
+      setQuestion(); //新しい問題文を作成する関数を実行
     }
 
   } else {
