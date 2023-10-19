@@ -15,9 +15,15 @@ const inputText = document.getElementById('inputText');
 
 let remainedTextWords = remained.textContent.split('');
 let enteredTextWords = [];
+let currentKey;
+let currentText;
 
 const setQuestion = () => {
-  // ここに処理を書く
+  // 配列の中から、ランダムで問題文を一つ選ぶ
+  currentKey = Math.floor(Math.random() * questions.length);
+  currentText = questions[currentKey];
+
+
 }
 
 document.addEventListener('input', (e) => {
