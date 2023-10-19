@@ -23,7 +23,17 @@ const setQuestion = () => {
   currentKey = Math.floor(Math.random() * questions.length);
   currentText = questions[currentKey];
 
+  // 現在の問題文をリセットして、新しい問題文を表示させる
+  // 画面に新しい問題文をセット
+  entered.textContent = '';
+  remained.textContent = currentText;
 
+  // これまで入力されたフォームの値をリセット
+  inputText.value = '';
+
+  // 入力済みの文字 未入力の文字の配列の中身をリセット
+  enteredTextWords = [];
+  remainedTextWords = currentText.split('');
 }
 
 document.addEventListener('input', (e) => {
