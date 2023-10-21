@@ -7,6 +7,15 @@
   align-items: center;
 }
 
+.text-container label{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .question {
   display: flex;
   font-size: 4vw;
@@ -16,10 +25,17 @@
 }
 
 .text {
+  width: 100%;
+  border: none;
   margin-top: 2rem;
   font-size: 2vw;
   letter-spacing: 0.1em;
   text-align: center;
+}
+
+.text:focus, .text:focus-visible {
+  border: none;
+  outline: none;
 }
 
 .marker {
