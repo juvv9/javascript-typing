@@ -12,6 +12,9 @@ const questions = [
 const entered = document.getElementById('entered');
 const remained = document.getElementById('remained');
 const inputText = document.getElementById('inputText');
+const game = document.getElementById('game');
+const message = document.getElementById('message');
+const replayBtn = document.getElementById('replayBtn');
 
 let remainedTextWords = remained.textContent.split('');
 let enteredTextWords = [];
@@ -49,22 +52,19 @@ document.addEventListener('input', (e) => {
     // 未入力文字の配列の先頭から1文字を削除
     remainedTextWords.shift();
 
-    console.log('==========================');
-    console.log('入力済み' + enteredTextWords);
-    console.log('未入力' + remainedTextWords);
-    console.log('==========================');
-
     // 入力済みテキスト&未入力テキストを連結して画面表示
     entered.textContent = enteredTextWords.join('');
     remained.textContent = remainedTextWords.join('');
 
     // 全ての文字が正しく入力されたら新しい問題文をセット
     if (remainedTextWords.length <= 0) {
-      console.log('クリア！全ての文字が入力されました');
-      setQuestion(); //新しい問題文を作成する関数を実行
+        if (questions.length <= 0) {
+          game.classList.add('hidden'); // ゲーム画面を非表示
+          message.classList.remove('hidden'); // 終了メッセージ表示
+        } else {
+          setQuestion(); //新しい問題文を作成する関数を実行
+        }
     }
 
-  } else {
-    console.log('不正解');
   }
 });
