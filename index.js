@@ -2,7 +2,7 @@
 
 const questions = [
   'JavaScript',
-  'documment',
+  'document',
   'windows',
   'getElementById',
   'getElementByClassName',
@@ -34,7 +34,10 @@ const setQuestion = () => {
   // 入力済みの文字 未入力の文字の配列の中身をリセット
   enteredTextWords = [];
   remainedTextWords = currentText.split('');
-}
+};
+
+// 関数の呼び出し
+setQuestion();
 
 document.addEventListener('input', (e) => {
   if (remainedTextWords[0] === e.data) {
