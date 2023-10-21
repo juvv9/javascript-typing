@@ -23,6 +23,9 @@ const setQuestion = () => {
   currentKey = Math.floor(Math.random() * questions.length);
   currentText = questions[currentKey];
 
+  // 一度選ばれた問題は配列から削除
+  questions.splice(currentKey, 1);
+
   // 現在の問題文をリセットして、新しい問題文を表示させる
   // 画面に新しい問題文をセット
   entered.textContent = '';
