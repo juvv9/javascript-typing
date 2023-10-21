@@ -68,3 +68,7 @@ document.addEventListener('input', (e) => {
 
   }
 });
+
+replayBtn.addEventListener('click', () => {
+  window.location.reload();
+})
